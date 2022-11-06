@@ -163,7 +163,7 @@ void monitor_cycle (Vtop *dut, VerilatedFstC *vtrace) {
     gettimeofday (&time_fib, NULL);
     seconds = get_seconds(time_fib, time_lcd);
     printf("::1::");
-    if (dut->io_ledr_o == 0x514229) {
+    if (dut->io_ledr_o == 0x55) {
       printf("\033[1;32mPASSED\033[0m");
     }
     else {
@@ -178,7 +178,7 @@ void monitor_cycle (Vtop *dut, VerilatedFstC *vtrace) {
     gettimeofday (&time_fac, NULL);
     seconds = get_seconds(time_fac, time_fib);
     printf("::2::");
-    if (dut->io_ledr_o == 0x39916800) {
+    if (dut->io_ledr_o == 0x5040) {
       printf("\033[1;32mPASSED\033[0m");
     }
     else {
@@ -208,7 +208,7 @@ void monitor_cycle (Vtop *dut, VerilatedFstC *vtrace) {
     gettimeofday (&time_twr, NULL);
     seconds = get_seconds(time_twr, time_gcd);
     printf("::4::");
-    if (dut->io_ledr_o == 0x65535) {
+    if (dut->io_ledr_o == 0x255) {
       printf("\033[1;32mPASSED\033[0m");
     }
     else {
