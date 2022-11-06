@@ -1,7 +1,7 @@
 `default_nettype none
 
 module wrapper
-import mypkg::*;
+//import mypkg::*;
 (
   input  logic [17:0]      SW      ,
 
@@ -26,8 +26,7 @@ import mypkg::*;
   input  logic             CLOCK_50
 );
 
-  logic illegal;
-  assign LEDR[17] = illegal;
+  assign LEDR[17] = 1'b1;
 
   logic [31:0]       io_sw  ;
   logic [31:0]       io_lcd ;
@@ -79,7 +78,6 @@ import mypkg::*;
     .io_hex5_o(io_hex5),
     .io_hex6_o(io_hex6),
     .io_hex7_o(io_hex7),
-    .illegal_o(illegal),
     .clk_i    (CLOCK_50),
     .rst_ni   (SW[17] )
   );
