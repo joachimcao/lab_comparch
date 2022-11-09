@@ -9,7 +9,7 @@ module data_memory #(
   input  logic [31:0]       pwdata_i ,
   input  logic [3:0]        pstrb_i  ,
   output logic [31:0]       prdata_o ,
-  output logic              pready_o ,
+  //output logic              pready_o ,
 
   /* verilator lint_off UNUSED */
   input  logic              clk_i   ,
@@ -54,6 +54,6 @@ module data_memory #(
   end
 
   assign prdata_o = dmem[paddr_i[DMEM_W-1:2]];
-  assign pready_o = 1'b1;
+  //assign pready_o = 1'b1;
 
 endmodule : data_memory
